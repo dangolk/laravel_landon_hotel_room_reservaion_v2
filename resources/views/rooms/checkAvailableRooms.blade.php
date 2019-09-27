@@ -11,6 +11,7 @@
         {{$client->last_name}}
         </b></div>
         <form action="" method="post">
+          {{ csrf_field() }}
           <div class="medium-1  columns">FROM:</div>
           <div class="medium-2  columns"><input name="dateFrom" value="{{ $dateFrom }}" type="text" class="datepicker" /></div>
           <div class="medium-1  columns">TO:</div>

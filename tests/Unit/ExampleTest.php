@@ -14,10 +14,27 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
+
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+        // $this->assertTrue(true);
+        $value = 1;
+        $this->assertTrue(1 === $value, 'Value should be 1');
     }
+
+    /*
+    public function testTitlesModelCount()
+    {
+        $titles = new Title;
+        $this->assertTrue(count($titles->all()) === 6, 'There should be 6 titles');
+    }
+
+    public function testLastTitlesShouldBeProfessor(){
+        $titles = new Title;
+        $titles_array = $titles->all();
+        $this->assertEquals(array_pop($titles_array), 'Professor', 'Last element of titles should be professor');
+    }
+
 
     /*public function testTitlesModelCount()
     {
@@ -33,5 +50,5 @@ class ExampleTest extends TestCase
         $titles_array = $titles->all();
         $this->assertEquals('Professor', array_pop( $titles_array ), 'Titles last element should be Professor' );
     }*/
-
+    
 }

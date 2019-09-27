@@ -21,12 +21,25 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
+
+    // public function testNonExistentRoute(){
+    //     $response = $this->get('/viola');
+    //     $response->assertStatus(200);
+    // }
+
     public function testNewClientForm()
     {
         $response = $this->get('/clients/new');
         $response->assertStatus(200);
     }
 
+
+    public function testLuciferListedInClients(){
+        $response = $this->get('/clients');
+        $this->assertContains('Lucifer', $response->getContent(),'HTML for list of clients should include Lucifer Morningstar');
+    }
+
+    /*
     public function testProfessorOption(){
         $response = $this->get('/clients/new');
         $this->assertContains('Professor',
@@ -34,5 +47,6 @@ class ExampleTest extends TestCase
             'HTML should have Professor'
         );
     }
+    */
 
 }
